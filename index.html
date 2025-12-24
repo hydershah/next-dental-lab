@@ -421,11 +421,21 @@
             font-size: 18px;
         }
 
+        .scanner-image {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
         .scanner-image img {
             width: 100%;
-            max-width: 400px;
+            max-width: 380px;
             margin: 0 auto;
             display: block;
+            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
         }
 
         /* Why Choose Us */
@@ -476,13 +486,13 @@
         .why-us-icon {
             width: 40px;
             height: 40px;
-            background: var(--teal-accent);
+            background: var(--primary-green);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-shrink: 0;
-            color: var(--dark-navy);
+            color: var(--white);
             font-weight: bold;
             font-size: 16px;
         }
@@ -591,6 +601,48 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
+        }
+
+        /* Partners Section */
+        .partners {
+            background: var(--white);
+            padding: 60px 0;
+        }
+
+        .partners .section-header {
+            margin-bottom: 40px;
+        }
+
+        .partners-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px 60px;
+        }
+
+        .partners-grid img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+            filter: grayscale(0%);
+            opacity: 0.85;
+            transition: all 0.3s ease;
+        }
+
+        .partners-grid img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .partners-grid {
+                gap: 30px 40px;
+            }
+
+            .partners-grid img {
+                height: 40px;
+            }
         }
 
         /* Trust Footer */
@@ -1141,20 +1193,27 @@
         </div>
     </section>
 
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2>Partners in Quality</h2>
+                <p>We use materials from industry-leading brands to ensure the highest quality restorations for your patients.</p>
+            </div>
+            <div class="partners-grid">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/ARGEN.png" alt="Argen">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/Identalloy.png" alt="Identalloy">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/e.max_.png" alt="E.max">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/Dentsply.png" alt="Dentsply">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/Dental-Direkt.png" alt="Dental Direkt">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/Ivoclar-vivadent.png" alt="Ivoclar Vivadent">
+            </div>
+        </div>
+    </section>
+
     <!-- Trust Footer -->
     <footer class="trust-footer">
         <div class="container">
-            <div class="trust-brands">
-                <h4>Materials from Trusted Brands</h4>
-                <div class="trust-brands-list">
-                    <span>Ivoclar Vivadent</span>
-                    <span>Dentsply</span>
-                    <span>BEGO</span>
-                    <span>E.max</span>
-                    <span>Dental Direkt</span>
-                    <span>Argen</span>
-                </div>
-            </div>
             <div class="trust-badges">
                 <div class="trust-badge">
                     <div class="trust-badge-icon">&#127942;</div>
