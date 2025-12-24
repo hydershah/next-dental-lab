@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Dental Lab | Partner Lab for Dental Practices</title>
+    <meta name="description" content="Full-service dental lab for dental practices. Save up to 50% on quality restorations. Register your practice today.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-green: #37b34a;
+            --primary-green-dark: #2d9340;
+            --dark-navy: #042c54;
+            --light-blue: #7eb8ff;
+            --teal-accent: #8AE7BB;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+            --text-dark: #333333;
+            --text-gray: #666666;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Sticky Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            padding: 12px 0;
+        }
+
+        .header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-logo {
+            height: 50px;
+        }
+
+        .header-ctas {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-green-dark);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary-green);
+            color: var(--primary-green);
+        }
+
+        .btn-outline:hover {
+            background: var(--primary-green);
+            color: var(--white);
+        }
+
+        .btn-phone {
+            background: var(--dark-navy);
+            color: var(--white);
+        }
+
+        .btn-phone:hover {
+            background: #063d75;
+        }
+
+        .btn-large {
+            padding: 18px 40px;
+            font-size: 17px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 130px 0 80px;
+            background: linear-gradient(135deg, var(--dark-navy) 0%, #0a4a8a 100%);
+            color: var(--white);
+        }
+
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-content .eyebrow {
+            display: inline-block;
+            background: rgba(55, 179, 74, 0.2);
+            color: var(--primary-green);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-content h1 {
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary-green);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            line-height: 1.7;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-form {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .hero-form h3 {
+            color: var(--dark-navy);
+            font-size: 22px;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .hero-form .form-subtitle {
+            color: var(--text-gray);
+            font-size: 14px;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .hero-form .form-subtitle span {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .hero-form-container {
+            min-height: 300px;
+        }
+
+        .hero-form .phone-cta {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .hero-form .phone-cta p {
+            color: var(--text-gray);
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .hero-form .phone-cta a {
+            color: var(--dark-navy);
+            font-size: 20px;
+            font-weight: 700;
+            text-decoration: none;
+        }
+
+        .hero-form .phone-cta a:hover {
+            color: var(--primary-green);
+        }
+
+        /* Value Props Bar */
+        .value-props {
+            background: var(--primary-green);
+            padding: 25px 0;
+        }
+
+        .value-props .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .value-prop {
+            color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .value-prop-icon {
+            font-size: 24px;
+        }
+
+        .value-prop h3 {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 36px;
+            color: var(--dark-navy);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 18px;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Products Section */
+        .products {
+            background: var(--light-bg);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .product-card-content {
+            padding: 20px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            color: var(--dark-navy);
+            margin-bottom: 8px;
+        }
+
+        .product-card .price {
+            color: var(--primary-green);
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            color: var(--text-gray);
+            font-size: 13px;
+        }
+
+        .products-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* Scanner Section */
+        .scanner {
+            background: linear-gradient(135deg, var(--dark-navy) 0%, #0a4a8a 100%);
+            color: var(--white);
+        }
+
+        .scanner .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .scanner-content .eyebrow {
+            display: inline-block;
+            background: rgba(55, 179, 74, 0.2);
+            color: var(--primary-green);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .scanner-content h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .scanner-content h2 span {
+            color: var(--primary-green);
+        }
+
+        .scanner-content .subtitle {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .scanner-benefits {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .scanner-benefits li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            font-size: 16px;
+        }
+
+        .scanner-benefits li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--primary-green);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .scanner-image img {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--white);
+        }
+
+        .why-us .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .why-us-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .why-us-content h2 {
+            font-size: 36px;
+            color: var(--dark-navy);
+            margin-bottom: 15px;
+        }
+
+        .why-us-content > p {
+            color: var(--text-gray);
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .why-us-list {
+            list-style: none;
+        }
+
+        .why-us-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .why-us-list li:last-child {
+            border-bottom: none;
+        }
+
+        .why-us-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--teal-accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            color: var(--dark-navy);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .why-us-list h4 {
+            color: var(--dark-navy);
+            margin-bottom: 3px;
+            font-size: 16px;
+        }
+
+        .why-us-list p {
+            color: var(--text-gray);
+            font-size: 13px;
+        }
+
+        .why-us-cta {
+            margin-top: 30px;
+        }
+
+        /* How It Works */
+        .how-it-works {
+            background: var(--light-bg);
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--white);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+
+        .step::after {
+            content: "→";
+            position: absolute;
+            right: -18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            color: var(--primary-green);
+            font-weight: bold;
+        }
+
+        .step:last-child::after {
+            display: none;
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-green);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 auto 15px;
+        }
+
+        .step h3 {
+            color: var(--dark-navy);
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        .step p {
+            color: var(--text-gray);
+            font-size: 13px;
+        }
+
+        .how-it-works-cta {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--dark-navy);
+            padding: 60px 0;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .cta-section h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 30px;
+        }
+
+        .cta-section .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Trust Footer */
+        .trust-footer {
+            background: #021a33;
+            color: var(--white);
+            padding: 50px 0 30px;
+        }
+
+        .trust-brands {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .trust-brands h4 {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.6;
+            margin-bottom: 15px;
+        }
+
+        .trust-brands-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            opacity: 0.7;
+            font-size: 13px;
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            text-align: center;
+            opacity: 0.8;
+        }
+
+        .trust-badge-icon {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+
+        .trust-badge p {
+            font-size: 12px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer-bottom p {
+            font-size: 13px;
+            opacity: 0.6;
+        }
+
+        /* Mobile Floating CTA */
+        .mobile-cta {
+            display: none;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--white);
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.15);
+            padding: 12px 15px;
+            z-index: 1000;
+        }
+
+        .mobile-cta .container {
+            display: flex;
+            gap: 10px;
+        }
+
+        .mobile-cta .btn {
+            flex: 1;
+            text-align: center;
+            padding: 14px 10px;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero .container,
+            .scanner .container,
+            .why-us .container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-form {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .scanner-image {
+                order: -1;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .steps-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .step::after {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-ctas .btn-outline {
+                display: none;
+            }
+
+            .hero {
+                padding: 110px 0 50px;
+            }
+
+            .hero-content {
+                text-align: center;
+            }
+
+            .hero-content h1 {
+                font-size: 30px;
+            }
+
+            .hero-content p {
+                font-size: 16px;
+            }
+
+            .hero-ctas {
+                justify-content: center;
+                display: none;
+            }
+
+            .value-props .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            section {
+                padding: 50px 0;
+            }
+
+            .section-header h2 {
+                font-size: 28px;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .scanner-content h2 {
+                font-size: 28px;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .mobile-cta {
+                display: block;
+            }
+
+            .trust-footer {
+                padding-bottom: 90px;
+            }
+
+            .cta-section {
+                display: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .header-logo {
+                height: 40px;
+            }
+
+            .btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+
+            .hero-content h1 {
+                font-size: 26px;
+            }
+
+            .hero-form {
+                padding: 25px 20px;
+            }
+
+            .value-props .container {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .trust-badges {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header -->
+    <header class="header">
+        <div class="container">
+            <img src="https://www.nextdentallab.com/wp-content/uploads/2022/04/cropped-NextDentalLab_Logo.png" alt="Next Dental Lab" class="header-logo">
+            <div class="header-ctas">
+                <a href="tel:8334005443" class="btn btn-phone">Call Now: (833) 400-5443</a>
+                <a href="#register-form" class="btn btn-outline">Fill Out Form</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Form -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="eyebrow">For Dental Professionals</span>
+                <h1>Grow Your Practice with a <span>Reliable Lab Partner</span></h1>
+                <p>Join hundreds of dental practices saving up to 50% on quality restorations. We've helped practices streamline their workflow and increase profitability for over 15 years.</p>
+                <div class="hero-ctas">
+                    <a href="#register-form" class="btn btn-primary btn-large">Fill Out Form</a>
+                    <a href="tel:8334005443" class="btn btn-outline btn-large" style="border-color: white; color: white;">Call Now: (833) 400-5443</a>
+                </div>
+            </div>
+            <div class="hero-form" id="register-form">
+                <h3>Register Your Practice</h3>
+                <p class="form-subtitle">Get your <span>first case FREE</span> + <span>$50 credit</span></p>
+                <div class="hero-form-container">
+                    <!-- HubSpot Form Embed -->
+                    <script src="https://js.hsforms.net/forms/embed/21504060.js" defer></script>
+                    <div class="hs-form-frame" data-region="na1" data-form-id="15576d1a-95d0-47d9-bd68-a942541f93ee" data-portal-id="21504060"></div>
+                </div>
+                <div class="phone-cta">
+                    <p>Prefer to talk?</p>
+                    <a href="tel:8334005443">(833) 400-5443</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props Bar -->
+    <section class="value-props">
+        <div class="container">
+            <div class="value-prop">
+                <span class="value-prop-icon">&#127873;</span>
+                <h3>First Case FREE</h3>
+            </div>
+            <div class="value-prop">
+                <span class="value-prop-icon">&#128737;</span>
+                <h3>Up to 5-Year Warranty</h3>
+            </div>
+            <div class="value-prop">
+                <span class="value-prop-icon">&#128230;</span>
+                <h3>FREE Shipping</h3>
+            </div>
+            <div class="value-prop">
+                <span class="value-prop-icon">&#9201;</span>
+                <h3>6-10 Day Turnaround</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Full-Service Lab for Your Practice</h2>
+                <p>Everything your practice needs - from crown & bridge to full-arch implants - all at prices that improve your bottom line.</p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card">
+                    <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/Crown-Bridge-new.png" alt="Crown and Bridge">
+                    <div class="product-card-content">
+                        <h3>Crown & Bridge</h3>
+                        <p class="price">PFM $30 &bull; Zirconia $39 &bull; E.max $47</p>
+                        <p>All-ceramic, PFM, full-cast, diagnostic wax-ups, and PMMA temporaries.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.nextdentallab.com/wp-content/uploads/2024/10/Removable-Dentures.png" alt="Removable Dentures">
+                    <div class="product-card-content">
+                        <h3>Removables</h3>
+                        <p class="price">Full Dentures $68 &bull; Partials &bull; Nightguards</p>
+                        <p>Dentures, acrylic partials, metal frameworks, and orthodontic appliances.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.nextdentallab.com/wp-content/uploads/2024/09/NDL-Product-Image-3.png" alt="Dental Implants">
+                    <div class="product-card-content">
+                        <h3>Dental Implants</h3>
+                        <p class="price">Cemented & Screw-Retained &bull; 5-Year Warranty</p>
+                        <p>Custom abutments and implant crowns with comprehensive solutions.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.nextdentallab.com/wp-content/uploads/2024/09/NDL-Product-Image-4.png" alt="Hybrid Dentures">
+                    <div class="product-card-content">
+                        <h3>Hybrid Dentures</h3>
+                        <p class="price">Implant-Supported &bull; Zirconia & Acrylic</p>
+                        <p>Full-arch implant solutions with premium materials.</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://www.nextdentallab.com/wp-content/uploads/2024/09/NDL-Product-Image-5.png" alt="Digital Impressions">
+                    <div class="product-card-content">
+                        <h3>Digital Impressions</h3>
+                        <p class="price">All Major Scanners Supported</p>
+                        <p>iTero, 3Shape, Sirona, Medit, Shining 3D, and STL files.</p>
+                    </div>
+                </div>
+                <div class="product-card" style="background: linear-gradient(135deg, var(--primary-green), #2d9340); display: flex; align-items: center; justify-content: center;">
+                    <div class="product-card-content" style="text-align: center;">
+                        <h3 style="color: white; font-size: 20px; margin-bottom: 12px;">Ready to Partner?</h3>
+                        <p style="color: rgba(255,255,255,0.9); margin-bottom: 15px; font-size: 14px;">Start saving on every case you send.</p>
+                        <a href="#register-form" class="btn" style="background: white; color: var(--primary-green);">Fill Out Form</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scanner Section -->
+    <section class="scanner">
+        <div class="container">
+            <div class="scanner-content">
+                <span class="eyebrow">Exclusive Offer for Practices</span>
+                <h2>Get a <span>FREE</span> Intraoral Scanner</h2>
+                <p class="subtitle">We cover the full cost of a Shining 3D Aoralscan 3 - $0 to your practice.</p>
+                <ul class="scanner-benefits">
+                    <li>Streamline your practice workflow</li>
+                    <li>Eliminate impression materials and remakes</li>
+                    <li>Faster turnaround on digital cases</li>
+                    <li>Training and ongoing support included</li>
+                    <li>Available to licensed dentists</li>
+                </ul>
+                <a href="#register-form" class="btn btn-primary btn-large">Fill Out Form</a>
+            </div>
+            <div class="scanner-image">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2022/06/shining-3d-ios.png" alt="Shining 3D Aoralscan 3 Scanner">
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="why-us-image">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2024/09/NDL-Section-Image-01.png" alt="Next Dental Lab Quality">
+            </div>
+            <div class="why-us-content">
+                <h2>Why Practices Choose Us</h2>
+                <p>Trusted by dental practices nationwide for consistent quality, competitive pricing, and reliable service.</p>
+                <ul class="why-us-list">
+                    <li>
+                        <div class="why-us-icon">15+</div>
+                        <div>
+                            <h4>Years Serving Practices</h4>
+                            <p>Proven track record of quality and reliability</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="why-us-icon">3</div>
+                        <div>
+                            <h4>Shipping Centers</h4>
+                            <p>Florida, California, New Jersey - faster delivery nationwide</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="why-us-icon">&#9889;</div>
+                        <div>
+                            <h4>Rush Service Available</h4>
+                            <p>1-3 day in-lab turnaround when you need it</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="why-us-icon">&#9733;</div>
+                        <div>
+                            <h4>Multiple Quality Tiers</h4>
+                            <p>Classic, Plus, and Elite options for your needs</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="why-us-cta">
+                    <a href="#register-form" class="btn btn-primary">Fill Out Form</a>
+                    <a href="tel:8334005443" class="btn btn-outline" style="margin-left: 10px;">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>Getting Started is Easy</h2>
+                <p>Register your practice and start sending cases in minutes</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Register</h3>
+                    <p>Fill out the form to create your practice account</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Download</h3>
+                    <p>Get your RX forms and free shipping labels</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Send</h3>
+                    <p>Ship physical or digital impressions to us</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Receive</h3>
+                    <p>Track cases and receive quality restorations</p>
+                </div>
+            </div>
+            <div class="how-it-works-cta">
+                <a href="#register-form" class="btn btn-primary btn-large">Fill Out Form - First Case FREE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Partner with Next Dental Lab?</h2>
+            <p>Join hundreds of practices already saving time and money.</p>
+            <div class="cta-buttons">
+                <a href="#register-form" class="btn btn-primary btn-large">Fill Out Form</a>
+                <a href="tel:8334005443" class="btn btn-large" style="background: transparent; border: 2px solid white; color: white;">Call Now: (833) 400-5443</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Footer -->
+    <footer class="trust-footer">
+        <div class="container">
+            <div class="trust-brands">
+                <h4>Materials from Trusted Brands</h4>
+                <div class="trust-brands-list">
+                    <span>Ivoclar Vivadent</span>
+                    <span>Dentsply</span>
+                    <span>BEGO</span>
+                    <span>E.max</span>
+                    <span>Dental Direkt</span>
+                    <span>Argen</span>
+                </div>
+            </div>
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">&#127942;</div>
+                    <p>NADL Member</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">&#128153;</div>
+                    <p>Dental Lifeline Network</p>
+                </div>
+                <div class="trust-badge">
+                    <div class="trust-badge-icon">&#127919;</div>
+                    <p>Made in USA Options</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Next Dental Lab. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Floating CTA -->
+    <div class="mobile-cta">
+        <div class="container">
+            <a href="tel:8334005443" class="btn btn-phone">Call Now</a>
+            <a href="#register-form" class="btn btn-primary">Fill Out Form</a>
+        </div>
+    </div>
+</body>
+</html>
