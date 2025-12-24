@@ -5,6 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Next Dental Lab | Partner Lab for Dental Practices</title>
     <meta name="description" content="Full-service dental lab for dental practices. Save up to 50% on quality restorations. Register your practice today.">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Next Dental Lab | Save 50% on Quality Restorations">
+    <meta property="og:description" content="Full-service dental lab for dental practices. First case FREE + $50 credit. Register today.">
+    <meta property="og:image" content="https://www.nextdentallab.com/wp-content/uploads/2022/04/cropped-NextDentalLab_Logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://www.nextdentallab.com/wp-content/uploads/2022/04/cropped-NextDentalLab_Logo-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://www.nextdentallab.com/wp-content/uploads/2022/04/cropped-NextDentalLab_Logo-192x192.png" sizes="192x192">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -168,57 +179,73 @@
             flex-wrap: wrap;
         }
 
-        .hero-form {
+        .hero-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
+        /* Form Section */
+        .form-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            padding: 80px 0;
+        }
+
+        .form-wrapper {
+            max-width: 700px;
+            margin: 0 auto;
             background: var(--white);
-            border-radius: 12px;
-            padding: 35px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 15px;
+            padding: 50px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
 
-        .hero-form h3 {
+        .form-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-header h2 {
+            font-size: 32px;
             color: var(--dark-navy);
-            font-size: 22px;
-            margin-bottom: 8px;
-            text-align: center;
+            margin-bottom: 10px;
         }
 
-        .hero-form .form-subtitle {
+        .form-header p {
+            font-size: 18px;
             color: var(--text-gray);
-            font-size: 14px;
-            text-align: center;
-            margin-bottom: 25px;
         }
 
-        .hero-form .form-subtitle span {
+        .form-header .highlight {
             color: var(--primary-green);
             font-weight: 600;
         }
 
-        .hero-form-container {
+        .form-container {
             min-height: 300px;
         }
 
-        .hero-form .phone-cta {
+        .form-phone-cta {
             text-align: center;
-            margin-top: 20px;
-            padding-top: 20px;
+            margin-top: 30px;
+            padding-top: 30px;
             border-top: 1px solid #eee;
         }
 
-        .hero-form .phone-cta p {
+        .form-phone-cta p {
+            font-size: 16px;
             color: var(--text-gray);
-            font-size: 14px;
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
 
-        .hero-form .phone-cta a {
+        .form-phone-cta a {
             color: var(--dark-navy);
-            font-size: 20px;
+            font-size: 24px;
             font-weight: 700;
             text-decoration: none;
         }
 
-        .hero-form .phone-cta a:hover {
+        .form-phone-cta a:hover {
             color: var(--primary-green);
         }
 
@@ -693,6 +720,11 @@
                 display: none;
             }
 
+            .header-ctas .btn-phone {
+                padding: 10px 15px;
+                font-size: 13px;
+            }
+
             .hero {
                 padding: 110px 0 50px;
             }
@@ -730,8 +762,39 @@
                 grid-template-columns: 1fr;
             }
 
+            .scanner-content {
+                text-align: center;
+            }
+
             .scanner-content h2 {
                 font-size: 28px;
+            }
+
+            .scanner-benefits {
+                text-align: left;
+                display: inline-block;
+            }
+
+            .why-us-image {
+                order: -1;
+            }
+
+            .why-us-content {
+                text-align: center;
+            }
+
+            .why-us-content h2 {
+                font-size: 28px;
+            }
+
+            .why-us-cta {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .why-us-cta .btn {
+                margin-left: 0 !important;
             }
 
             .steps-grid {
@@ -756,6 +819,11 @@
                 height: 40px;
             }
 
+            .header-ctas .btn-phone {
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+
             .btn {
                 padding: 12px 20px;
                 font-size: 14px;
@@ -769,6 +837,10 @@
                 padding: 25px 20px;
             }
 
+            .hero-form h3 {
+                font-size: 20px;
+            }
+
             .value-props .container {
                 grid-template-columns: 1fr;
                 gap: 12px;
@@ -779,9 +851,49 @@
                 gap: 15px;
             }
         }
+
+        /* Form loading state */
+        .form-container:empty::before {
+            content: "Loading form...";
+            display: block;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            .form-wrapper {
+                padding: 30px 25px;
+            }
+
+            .form-header h2 {
+                font-size: 26px;
+            }
+        }
+
+        /* Accessibility - Skip to content */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--primary-green);
+            color: white;
+            padding: 8px 16px;
+            z-index: 9999;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
     </style>
 </head>
 <body>
+    <!-- Accessibility Skip Link -->
+    <a href="#register-form" class="skip-link">Skip to Form</a>
+
     <!-- Sticky Header -->
     <header class="header">
         <div class="container">
@@ -793,7 +905,7 @@
         </div>
     </header>
 
-    <!-- Hero Section with Form -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -805,18 +917,8 @@
                     <a href="tel:8334005443" class="btn btn-outline btn-large" style="border-color: white; color: white;">Call Now: (833) 400-5443</a>
                 </div>
             </div>
-            <div class="hero-form" id="register-form">
-                <h3>Register Your Practice</h3>
-                <p class="form-subtitle">Get your <span>first case FREE</span> + <span>$50 credit</span></p>
-                <div class="hero-form-container">
-                    <!-- HubSpot Form Embed -->
-                    <script src="https://js.hsforms.net/forms/embed/21504060.js" defer></script>
-                    <div class="hs-form-frame" data-region="na1" data-form-id="15576d1a-95d0-47d9-bd68-a942541f93ee" data-portal-id="21504060"></div>
-                </div>
-                <div class="phone-cta">
-                    <p>Prefer to talk?</p>
-                    <a href="tel:8334005443">(833) 400-5443</a>
-                </div>
+            <div class="hero-image">
+                <img src="https://www.nextdentallab.com/wp-content/uploads/2025/09/Untitled-design-2-scaled.png" alt="Quality Dental Restorations">
             </div>
         </div>
     </section>
@@ -1002,6 +1104,27 @@
             </div>
             <div class="how-it-works-cta">
                 <a href="#register-form" class="btn btn-primary btn-large">Fill Out Form - First Case FREE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="form-section" id="register-form">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h2>Register Your Practice</h2>
+                    <p>Get your <span class="highlight">first case FREE</span> + <span class="highlight">$50 credit</span></p>
+                </div>
+                <div class="form-container">
+                    <!-- HubSpot Form Embed -->
+                    <script src="https://js.hsforms.net/forms/embed/21504060.js" defer></script>
+                    <div class="hs-form-frame" data-region="na1" data-form-id="15576d1a-95d0-47d9-bd68-a942541f93ee" data-portal-id="21504060"></div>
+                </div>
+                <div class="form-phone-cta">
+                    <p>Prefer to talk?</p>
+                    <a href="tel:8334005443">(833) 400-5443</a>
+                </div>
             </div>
         </div>
     </section>
