@@ -23,6 +23,26 @@
     <link rel="icon" type="image/png" href="https://www.nextdentallab.com/wp-content/uploads/2022/04/cropped-NextDentalLab_Logo-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://www.nextdentallab.com/wp-content/uploads/2022/04/cropped-NextDentalLab_Logo-192x192.png" sizes="192x192">
 
+    <!-- MegaTag Configuration -->
+    <script>
+        // Set configuration BEFORE loading the optimizer script
+        window.MEGA_TAG_CONFIG = {
+            siteKey: "YOUR_SITE_KEY",      // Required - get from admin panel
+            gtmId: "GTM-XXXXXXX",          // Client's GTM container ID
+            gaId: "G-XXXXXXXXXX",          // Client's GA4 measurement ID
+            pixelId: "1234567890"          // Client's Meta Pixel ID
+        };
+
+        // Set API endpoints
+        window.API_ENDPOINT = "https://optimizer.gomega.ai";
+        window.TRACKING_API_ENDPOINT = "https://events-api.gomega.ai";
+    </script>
+    <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async></script>
+
+    <!-- CallTrackingMetrics -->
+    <script src="https://572388.tctm.co/t.js" async></script>
+    <!-- End CallTrackingMetrics -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -184,6 +204,46 @@
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
+        }
+
+        .hero-trust {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-item-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .trust-item-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .trust-item-value {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .trust-item-label {
+            font-size: 12px;
+            opacity: 0.8;
         }
 
         .hero-image img {
@@ -584,6 +644,92 @@
             margin-top: 40px;
         }
 
+        /* Testimonials Section */
+        .testimonials {
+            background: var(--white);
+            overflow: hidden;
+        }
+
+        .testimonials-scroll {
+            display: flex;
+            gap: 25px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 5px 20px;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-green) #e0e0e0;
+        }
+
+        .testimonials-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .testimonials-scroll::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+
+        .testimonials-scroll::-webkit-scrollbar-thumb {
+            background: var(--primary-green);
+            border-radius: 10px;
+        }
+
+        .testimonial-card {
+            min-width: 350px;
+            max-width: 350px;
+            background: var(--light-bg);
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            flex-shrink: 0;
+        }
+
+        .testimonial-stars {
+            color: #ffc107;
+            font-size: 20px;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+
+        .testimonial-text {
+            color: var(--text-dark);
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .testimonial-info h4 {
+            color: var(--dark-navy);
+            font-size: 16px;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-info p {
+            color: var(--text-gray);
+            font-size: 13px;
+        }
+
         /* CTA Section */
         .cta-section {
             background: var(--dark-navy);
@@ -703,6 +849,35 @@
             font-size: 12px;
         }
 
+        .footer-content {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .footer-logo {
+            height: 45px;
+            margin-bottom: 20px;
+            filter: brightness(0) invert(1);
+        }
+
+        .footer-address {
+            font-size: 14px;
+            line-height: 1.8;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-phone a {
+            color: var(--primary-green);
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .footer-phone a:hover {
+            color: var(--white);
+        }
+
         .footer-bottom {
             text-align: center;
             padding-top: 25px;
@@ -805,6 +980,15 @@
                 display: none;
             }
 
+            .hero-trust {
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .trust-item-value {
+                font-size: 16px;
+            }
+
             .value-props .container {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -858,6 +1042,12 @@
 
             .steps-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .testimonial-card {
+                min-width: 300px;
+                max-width: 300px;
+                padding: 25px;
             }
 
             .mobile-cta {
@@ -978,6 +1168,29 @@
                 <div class="hero-ctas">
                     <a href="#register-form" class="btn btn-primary btn-large">Fill Out Form</a>
                     <a href="tel:8334005443" class="btn btn-outline btn-large" style="border-color: white; color: white;">Call Now: (833) 400-5443</a>
+                </div>
+                <div class="hero-trust">
+                    <div class="trust-item">
+                        <div class="trust-item-icon">&#9733;</div>
+                        <div class="trust-item-content">
+                            <span class="trust-item-value">4.9/5</span>
+                            <span class="trust-item-label">Google Rating</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-item-icon">&#128205;</div>
+                        <div class="trust-item-content">
+                            <span class="trust-item-value">15+ Years</span>
+                            <span class="trust-item-label">In Business</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-item-icon">&#128100;</div>
+                        <div class="trust-item-content">
+                            <span class="trust-item-value">500+</span>
+                            <span class="trust-item-label">Practices Served</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="hero-image">
@@ -1171,6 +1384,73 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Dental Practices Say</h2>
+                <p>Trusted by dental professionals across the country</p>
+            </div>
+            <div class="testimonials-scroll">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"We've been using Next Dental Lab for over 5 years now. The quality is consistent, pricing is fair, and their customer service is outstanding. They've become an essential partner for our practice."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DR</div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Robert Chen</h4>
+                            <p>General Dentistry, California</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Switching to Next Dental Lab was one of the best decisions for our practice. The turnaround time is fast, and we rarely have to deal with remakes. Highly recommend them to any dental office."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Sarah Mitchell</h4>
+                            <p>Family Dentistry, Texas</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"The free scanner program changed our workflow completely. Digital impressions are so much easier, and the lab integrates perfectly. Their support team helped us every step of the way."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MJ</div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Michael Johnson</h4>
+                            <p>Cosmetic Dentistry, Florida</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Great lab with competitive pricing. The zirconia crowns we receive are excellent quality and fit well. Communication is always prompt when we have questions about cases."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">LP</div>
+                        <div class="testimonial-info">
+                            <h4>Dr. Lisa Patel</h4>
+                            <p>Prosthodontics, New Jersey</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"Been with Next Dental Lab for 3 years. Their implant work is top-notch, and the 5-year warranty gives us and our patients peace of mind. Shipping is always fast with multiple distribution centers."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JW</div>
+                        <div class="testimonial-info">
+                            <h4>Dr. James Wilson</h4>
+                            <p>Implant Dentistry, Arizona</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
@@ -1210,9 +1490,63 @@
                     <p>Get your <span class="highlight">first case FREE</span> + <span class="highlight">$50 credit</span></p>
                 </div>
                 <div class="form-container">
-                    <!-- HubSpot Form Embed -->
-                    <script src="https://js.hsforms.net/forms/embed/21504060.js" defer></script>
-                    <div class="hs-form-frame" data-region="na1" data-form-id="15576d1a-95d0-47d9-bd68-a942541f93ee" data-portal-id="21504060"></div>
+                    <form id="lead-form" action="send-email.php" method="POST">
+                        <div style="margin-bottom: 20px;">
+                            <label for="name" style="display: block; margin-bottom: 5px; font-weight: 500; color: var(--dark-navy);">Full Name *</label>
+                            <input type="text" id="name" name="name" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 15px; font-family: inherit;">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label for="email" style="display: block; margin-bottom: 5px; font-weight: 500; color: var(--dark-navy);">Email Address *</label>
+                            <input type="email" id="email" name="email" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 15px; font-family: inherit;">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label for="phone" style="display: block; margin-bottom: 5px; font-weight: 500; color: var(--dark-navy);">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 15px; font-family: inherit;">
+                        </div>
+                        <div style="margin-bottom: 20px;">
+                            <label for="practice" style="display: block; margin-bottom: 5px; font-weight: 500; color: var(--dark-navy);">Practice Name</label>
+                            <input type="text" id="practice" name="practice" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 15px; font-family: inherit;">
+                        </div>
+                        <div style="margin-bottom: 25px;">
+                            <label for="message" style="display: block; margin-bottom: 5px; font-weight: 500; color: var(--dark-navy);">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="3" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-size: 15px; font-family: inherit; resize: vertical;"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; font-size: 16px;">Register My Practice</button>
+                        <p id="form-message" style="margin-top: 15px; text-align: center; display: none;"></p>
+                    </form>
+                    <script>
+                    document.getElementById('lead-form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const form = this;
+                        const btn = form.querySelector('button[type="submit"]');
+                        const msg = document.getElementById('form-message');
+
+                        btn.disabled = true;
+                        btn.textContent = 'Sending...';
+                        msg.style.display = 'none';
+
+                        fetch('send-email.php', {
+                            method: 'POST',
+                            body: new FormData(form)
+                        })
+                        .then(res => res.json())
+                        .then(data => {
+                            msg.style.display = 'block';
+                            msg.style.color = data.success ? 'var(--primary-green)' : '#dc3545';
+                            msg.textContent = data.message;
+                            if (data.success) form.reset();
+                        })
+                        .catch(() => {
+                            msg.style.display = 'block';
+                            msg.style.color = '#dc3545';
+                            msg.textContent = 'Something went wrong. Please call us instead.';
+                        })
+                        .finally(() => {
+                            btn.disabled = false;
+                            btn.textContent = 'Register My Practice';
+                        });
+                    });
+                    </script>
                 </div>
                 <div class="form-phone-cta">
                     <p>Prefer to talk?</p>
@@ -1222,9 +1556,22 @@
         </div>
     </section>
 
-    <!-- Trust Footer -->
+    <!-- Footer -->
     <footer class="trust-footer">
         <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img src="https://www.nextdentallab.com/wp-content/uploads/2022/04/cropped-NextDentalLab_Logo.png" alt="Next Dental Lab" class="footer-logo">
+                    <p class="footer-address">
+                        Next Dental Lab<br>
+                        4699 N Federal Hwy, Suite 101<br>
+                        Pompano Beach, FL 33064
+                    </p>
+                    <p class="footer-phone">
+                        <a href="tel:8334005443">(833) 400-5443</a>
+                    </p>
+                </div>
+            </div>
             <div class="footer-bottom">
                 <p>&copy; 2025 Next Dental Lab. All Rights Reserved.</p>
             </div>
