@@ -1318,37 +1318,22 @@
             margin-bottom: 20px !important;
         }
 
-        /* Hide ALL labels, asterisks, and rich text elements */
-        .form-container .hs-form .hs-form-field > label,
-        .form-container .hs-form .hs-form-required,
-        .form-container .hs-form span.hs-form-required,
-        .form-container .hs-form .field > label,
-        .form-container .hs-form label.hs-main-font-element,
+        /* Hide only asterisks and rich text elements */
         .form-container .hs-form .hs-richtext,
         .form-container .hs-form .hs-field-desc,
-        .form-container .hs-form .no-list,
-        .form-container .hs-form label,
-        .form-container .hs-form .hs-form-field > div:first-child:not(.input),
-        .form-container .hs-form p,
-        .form-container .hs-form .hs-form-field > span {
+        .form-container .hs-form .hs-form-required,
+        .form-container .hs-form span.hs-form-required {
             display: none !important;
-            visibility: hidden !important;
-            height: 0 !important;
-            overflow: hidden !important;
-            font-size: 0 !important;
         }
 
-        /* Show only checkbox/consent labels */
-        .form-container .hs-form .hs-fieldtype-booleancheckbox label,
-        .form-container .hs-form .hs-form-checkbox-display span,
-        .form-container .hs-form .legal-consent-container label,
-        .form-container .hs-form .legal-consent-container p,
-        .form-container .hs-form .hs-form-booleancheckbox-display span {
-            display: flex !important;
-            visibility: visible !important;
-            height: auto !important;
-            overflow: visible !important;
-            font-size: 13px !important;
+        /* Style labels - show them in black */
+        .form-container .hs-form label {
+            display: block !important;
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+            font-size: 14px !important;
+            font-weight: 500 !important;
+            margin-bottom: 8px !important;
         }
 
         /* Style inputs with placeholders only */
@@ -1423,7 +1408,8 @@
 
         .form-container .hs-form .hs-fieldtype-booleancheckbox .hs-form-checkbox-display span {
             font-size: 13px !important;
-            color: var(--text-gray) !important;
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
             font-weight: 400 !important;
             line-height: 1.5 !important;
         }
@@ -1435,6 +1421,77 @@
             margin: 2px 0 0 0 !important;
             cursor: pointer !important;
             accent-color: var(--primary-green) !important;
+        }
+
+        /* Legal consent / checkbox list styling */
+        .form-container .hs-form .legal-consent-container,
+        .form-container .hs-form .hs-form-booleancheckbox-display {
+            margin-top: 20px !important;
+        }
+
+        .form-container .hs-form .legal-consent-container .hs-form-booleancheckbox-display {
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .form-container .hs-form .inputs-list {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .form-container .hs-form .inputs-list li {
+            list-style: none !important;
+            margin-bottom: 15px !important;
+            padding-left: 0 !important;
+        }
+
+        .form-container .hs-form .inputs-list li::before {
+            display: none !important;
+        }
+
+        .form-container .hs-form .inputs-list label {
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 10px !important;
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+            font-size: 13px !important;
+            line-height: 1.5 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .form-container .hs-form .inputs-list input[type="checkbox"] {
+            flex-shrink: 0 !important;
+            margin-top: 3px !important;
+        }
+
+        /* Success message styling */
+        .form-container .submitted-message,
+        .form-container .hs-form .submitted-message,
+        .form-container .hs-main-font-element {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+            font-size: 16px !important;
+            line-height: 1.6 !important;
+        }
+
+        .form-container .submitted-message h1,
+        .form-container .submitted-message h2,
+        .form-container .submitted-message h3,
+        .form-container .submitted-message p,
+        .form-container .submitted-message span,
+        .form-container .submitted-message a {
+            color: #333333 !important;
+            -webkit-text-fill-color: #333333 !important;
+        }
+
+        .form-container .submitted-message a {
+            color: var(--primary-green) !important;
+            -webkit-text-fill-color: var(--primary-green) !important;
+            text-decoration: underline !important;
         }
 
         /* Submit button */
@@ -1916,7 +1973,7 @@
                         formId: "e9bfdebb-88e9-4d86-ac02-c2b54608aefb",
                         region: "na1",
                         cssRequired: '',
-                        css: 'input, select, textarea { color: #333333 !important; -webkit-text-fill-color: #333333 !important; } input::placeholder { color: #999999 !important; -webkit-text-fill-color: #999999 !important; } .hs-richtext { display: none !important; } label { display: none !important; } .hs-form-required { display: none !important; } .hs-fieldtype-booleancheckbox label, .legal-consent-container label { display: flex !important; }',
+                        css: 'input, select, textarea { color: #333333 !important; -webkit-text-fill-color: #333333 !important; } input::placeholder { color: #999999 !important; -webkit-text-fill-color: #999999 !important; } label { color: #333333 !important; -webkit-text-fill-color: #333333 !important; display: block !important; } .hs-richtext, .hs-form-required { display: none !important; } .submitted-message, .submitted-message *, .hs-main-font-element { color: #333333 !important; -webkit-text-fill-color: #333333 !important; } .submitted-message a { color: #37b34a !important; -webkit-text-fill-color: #37b34a !important; }',
                         onFormReady: function($form) {
                           var form = $form[0] || $form;
 
@@ -1925,20 +1982,19 @@
                           inputs.forEach(function(el) {
                             el.style.setProperty('color', '#333333', 'important');
                             el.style.setProperty('-webkit-text-fill-color', '#333333', 'important');
-                            el.setAttribute('style', el.getAttribute('style') + '; color: #333333 !important; -webkit-text-fill-color: #333333 !important;');
+                          });
+
+                          // Fix label text colors - make them black
+                          var labels = form.querySelectorAll('label');
+                          labels.forEach(function(el) {
+                            el.style.setProperty('color', '#333333', 'important');
+                            el.style.setProperty('-webkit-text-fill-color', '#333333', 'important');
+                            el.style.setProperty('display', 'block', 'important');
                           });
 
                           // Hide rich text elements (asterisks)
                           var richTexts = form.querySelectorAll('.hs-richtext');
                           richTexts.forEach(function(el) { el.remove(); });
-
-                          // Hide labels except checkbox
-                          var labels = form.querySelectorAll('label');
-                          labels.forEach(function(el) {
-                            if (!el.closest('.hs-fieldtype-booleancheckbox') && !el.closest('.legal-consent-container')) {
-                              el.remove();
-                            }
-                          });
 
                           // Hide required asterisks
                           var required = form.querySelectorAll('.hs-form-required');
