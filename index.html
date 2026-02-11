@@ -68,10 +68,6 @@
     </script>
     <script src="https://cdn.gomega.ai/scripts/optimizer.min.js" async></script>
 
-    <!-- CallTrackingMetrics -->
-    <script src="https://572388.tctm.co/t.js" async></script>
-    <!-- End CallTrackingMetrics -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -171,15 +167,6 @@
       .btn-outline:hover {
         background: var(--primary-green);
         color: var(--white);
-      }
-
-      .btn-phone {
-        background: var(--dark-navy);
-        color: var(--white);
-      }
-
-      .btn-phone:hover {
-        background: #063d75;
       }
 
       .btn-large {
@@ -454,22 +441,6 @@
         transform: none;
       }
 
-      .registration-form-wrapper .form-phone-cta {
-        border-top-color: #eee;
-      }
-
-      .registration-form-wrapper .form-phone-cta p {
-        color: var(--text-gray);
-      }
-
-      .registration-form-wrapper .form-phone-cta a {
-        color: var(--dark-navy);
-      }
-
-      .registration-form-wrapper .form-phone-cta a:hover {
-        color: var(--primary-green);
-      }
-
       .form-header {
         text-align: center;
         margin-bottom: 30px;
@@ -493,30 +464,6 @@
 
       .form-container {
         min-height: 300px;
-      }
-
-      .form-phone-cta {
-        text-align: center;
-        margin-top: 30px;
-        padding-top: 30px;
-        border-top: 1px solid #eee;
-      }
-
-      .form-phone-cta p {
-        font-size: 16px;
-        color: var(--text-gray);
-        margin-bottom: 8px;
-      }
-
-      .form-phone-cta a {
-        color: var(--dark-navy);
-        font-size: 24px;
-        font-weight: 700;
-        text-decoration: none;
-      }
-
-      .form-phone-cta a:hover {
-        color: var(--primary-green);
       }
 
       /* Value Props Bar */
@@ -1072,17 +1019,6 @@
         margin-bottom: 10px;
       }
 
-      .footer-phone a {
-        color: var(--primary-green);
-        font-size: 18px;
-        font-weight: 600;
-        text-decoration: none;
-      }
-
-      .footer-phone a:hover {
-        color: var(--white);
-      }
-
       .footer-bottom {
         text-align: center;
         padding-top: 25px;
@@ -1157,11 +1093,6 @@
       @media (max-width: 768px) {
         .header-ctas .btn-outline {
           display: none;
-        }
-
-        .header-ctas .btn-phone {
-          padding: 10px 15px;
-          font-size: 13px;
         }
 
         .hero {
@@ -1271,11 +1202,6 @@
       @media (max-width: 480px) {
         .header-logo {
           height: 40px;
-        }
-
-        .header-ctas .btn-phone {
-          padding: 8px 12px;
-          font-size: 12px;
         }
 
         .btn {
@@ -1695,10 +1621,7 @@
           class="header-logo"
         />
         <div class="header-ctas">
-          <a href="tel:8334005443" class="btn btn-phone"
-            >Call Now: (833) 400-5443</a
-          >
-          <a href="#contact" class="btn btn-outline">Fill Out Form</a>
+          <a href="#contact" class="btn btn-primary">Fill Out Form</a>
         </div>
       </div>
     </header>
@@ -1717,12 +1640,6 @@
           <div class="hero-ctas">
             <a href="#contact" class="btn btn-primary btn-large"
               >Fill Out Form</a
-            >
-            <a
-              href="tel:8334005443"
-              class="btn btn-outline btn-large"
-              style="border-color: white; color: white"
-              >Call Now: (833) 400-5443</a
             >
           </div>
           <div class="hero-trust">
@@ -1996,12 +1913,6 @@
           </ul>
           <div class="why-us-cta">
             <a href="#contact" class="btn btn-primary">Fill Out Form</a>
-            <a
-              href="tel:8334005443"
-              class="btn btn-outline"
-              style="margin-left: 10px"
-              >Call Now</a
-            >
           </div>
         </div>
       </div>
@@ -2150,16 +2061,6 @@
         <p>Join hundreds of practices already saving time and money.</p>
         <div class="cta-buttons">
           <a href="#contact" class="btn btn-primary btn-large">Fill Out Form</a>
-          <a
-            href="tel:8334005443"
-            class="btn btn-large"
-            style="
-              background: transparent;
-              border: 2px solid white;
-              color: white;
-            "
-            >Call Now: (833) 400-5443</a
-          >
         </div>
       </div>
     </section>
@@ -2272,10 +2173,6 @@
               });
             </script>
           </div>
-          <div class="form-phone-cta">
-            <p>Prefer to talk?</p>
-            <a href="tel:8334005443">(833) 400-5443</a>
-          </div>
         </div>
       </div>
     </section>
@@ -2295,9 +2192,6 @@
               402 SW 12th Ave.<br />
               Deerfield Beach, FL 33442
             </p>
-            <p class="footer-phone">
-              <a href="tel:8334005443">(833) 400-5443</a>
-            </p>
           </div>
         </div>
         <div class="footer-bottom">
@@ -2309,8 +2203,7 @@
     <!-- Mobile Floating CTA -->
     <div class="mobile-cta">
       <div class="container">
-        <a href="tel:8334005443" class="btn btn-phone">Call Now</a>
-        <a href="#contact" class="btn btn-primary">Fill Out Form</a>
+        <a href="#contact" class="btn btn-primary" style="width: 100%">Fill Out Form</a>
       </div>
     </div>
   </body>
